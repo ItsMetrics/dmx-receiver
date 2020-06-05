@@ -1,0 +1,28 @@
+{
+  "name": "dmx-receiver",
+  "version": "1.0.0",
+  "description": "Simple node-dmx receiver using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsMetrics/dmx-receiver.git"
+  },
+  "keywords": [
+    "dmx",
+    "node",
+    "socketio"
+  ],
+  "author": "Jason Segarra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItsMetrics/dmx-receiver/issues"
+  },
+  "homepage": "https://github.com/ItsMetrics/dmx-receiver#readme",
+  "dependencies": {
+    "dmx": "^0.2.4",
+    "socket.io": "^2.3.0"
+  }
+}
