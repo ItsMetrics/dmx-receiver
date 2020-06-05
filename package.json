@@ -23,6 +23,6 @@
   "homepage": "https://github.com/ItsMetrics/dmx-receiver#readme",
   "dependencies": {
     "dmx": "^0.2.4",
-    "socket.io": "^2.3.0"
+    "socket.io-client": "^2.3.0"
   }
 }
