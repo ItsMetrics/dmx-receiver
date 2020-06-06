@@ -1,22 +1,16 @@
-module.exports = function() {
-    
-    // The NodeCG extension will broadcast the changes to this receiver
-    // The receiver will interact with the dmx device and the lights
+class Receiver {
+    constructor(options) {
+        this.options = options || {};
+        
+        // socket.io init
+        this.port = options.port || "17809";
+        this.address = options.address || "http://localhost:";
+        console.log('testing');
+        const io = require('socket.io-client');
+        const client = io.connect('http://localhost:17809');
 
-    // Listener for the DMX instructions on the dashboard
-    const port = "18909"
-    const io = require('socket.io-client')
-    const client = io.connect('http://localhost:${port}');
-
-    // node dmx stuff
-    const DMX = require('dmx');
-    const dmx = new DMX();
-
-
-    function Init() {
-
+        client.on('update', (msg) => console.info(msg));
     }
+}
 
-    // socket.io handling
-    client.on('update', (msg) => console.info(msg));
-};
+module.exports = Receiver;
