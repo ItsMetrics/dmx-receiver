@@ -7,7 +7,7 @@ class Receiver {
         this.address = options.address || "http://localhost:";
         console.log('testing');
         const io = require('socket.io-client');
-        const client = io.connect('http://localhost:17809');
+        const client = io.connect();
 
         client.on('update', (msg) => console.info(msg));
     }

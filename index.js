@@ -1,11 +1,9 @@
 'use strict';
 
 const receiver = require('./source/receiver');
+const controller = require('./source/dmx-controller');
 
 const Receiver = new receiver({port: 17809, address: 'http://localhost:'});
-// console.log('testing');
-// const io = require('socket.io-client');
-// const client = io.connect('http://localhost:17809');
-
-// client.on('update', (msg) => console.info(msg));
+const Controller = new controller({useNullDevice: true});
+//const Controller = new controller({device: '/dev/ttyUSB0', deviceOptions: {}});
  
