@@ -12,8 +12,24 @@ class dmxcontroller {
         }
         else
         {
-            this.universe = this.dmx.addUniverse('main', 'enttec-usb-dmx-pro', options.device, options.deviceOptions);
+            this.universe = this.dmx.addUniverse(options.name, options.driver, options.device, options.deviceOptions);
         }
+    }
+
+    update(data)
+    {
+        this.universe.update(data);
+    }
+    // TODO - create some kind of enumeration for driver types.
+    static drivers = {
+        ARTNET : 'artnet',
+        BBDMX : 'bbdmx',
+        DMX4ALL: 'dmx4all',
+        DMXKING: 'dmxkng-ultra-dmx-pro',
+        ENTTECOPEN: 'enttec-open-usb-dmx',
+        ENTTECPRO: 'enttec-usb-dmx-pro',
+        NULL: 'null',
+        SOCKETIO: 'socketio'
     }
 
 };
