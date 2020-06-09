@@ -23,7 +23,7 @@ class Receiver {
         // send it to the dmx controller
         if(this.dmxController)
         {
-
+            this.dmxController.update(msg);
         }
 
     }
