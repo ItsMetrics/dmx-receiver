@@ -16,6 +16,8 @@ class dmxcontroller {
         }
     }
 
+    // TODO - this is just setup to receive the sockiet.io driver output. We might have to make this
+    // handle out of order messages
     update(data)
     {
         this.universe.update(data);
