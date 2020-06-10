@@ -1,0 +1,4 @@
+{
+    "name" : "test",
+    "device" : "/dev/ttyUSB0"
+}
