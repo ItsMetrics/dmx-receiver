@@ -8,11 +8,12 @@ class Receiver {
         console.log('testing');
         this.addressConcat = this.address.concat(this.port);
         console.log('Attempting to connect to: ' + this.addressConcat);
+        this.io = require('socket.io-client');
         this.client = this.io.connect(this.addressConcat);
         
         this.controller = null;
 
-        client.on('update', (msg) => {
+        this.client.on('update', (msg) => {
             console.info(msg);
             this.onDataReceived(msg);
         });
@@ -47,5 +48,5 @@ class Receiver {
 
 Receiver.controller = require('./dmx-controller');
 
-Receiver.io = require('socket.io-client');
+//Receiver.io = require('socket.io-client');
 module.exports = Receiver;
